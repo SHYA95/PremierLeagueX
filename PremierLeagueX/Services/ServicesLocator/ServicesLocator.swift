@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class ServiceLocator {
+    
+    /// Home Worker.
+    ///
+    static var matchWorker: MatchWorkerProtocol = MatchWorker()
+    
+}
+    

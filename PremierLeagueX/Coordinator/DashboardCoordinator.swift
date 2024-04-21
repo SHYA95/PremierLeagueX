@@ -43,14 +43,14 @@ extension DashboardCoordinator: DashboardCoordinatorProtocol {
 extension DashboardCoordinator {
     func getHomeViewController() -> UIViewController {
         let viewModel = HomeViewModel()
-        let viewController = HomeViewController()
+        let viewController = HomeViewController(viewModel: viewModel)
 //        viewController.coordinator = self
         return viewController
     }
     
     func getFavViewController() -> UIViewController {
-        let viewModel = FavouriteViewModel()
-        let viewController = FavouriteViewController()
+        let viewModel = HomeViewModel()
+        let viewController = FavouriteViewController(viewModel: viewModel)
 //        viewController.coordinator = self
         return viewController
     }
